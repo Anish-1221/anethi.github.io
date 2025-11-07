@@ -1,0 +1,232 @@
+/*
+ * Custom stylesheet tailored to match the look and feel of Sagnik Majumder's
+ * personal website. The design here follows a clean, single‑column layout
+ * with generous margins and simple typography. Colours are lifted from
+ * Sagnik's site: blue for links (#1772d0), orange on hover (#f09228) and
+ * red to emphasise key phrases. The Titillium Web font is used
+ * throughout for a modern yet legible appearance.
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700&display=swap');
+
+/* Base styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #000;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+/* Container to centre content and constrain width */
+.wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Heading styles */
+h1 {
+  font-weight: 700;
+  font-size: 2.75rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Red emphasised text */
+.highlight {
+  color: red;
+  font-weight: 600;
+}
+
+/* Flexbox for hero section (bio and photo) */
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.hero .bio {
+  flex: 1 1 60%;
+}
+
+.hero .photo {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.hero .photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Inline list of links under bio */
+.link-list {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.link-list a {
+  margin: 0 5px;
+}
+
+/* Affiliations section */
+.affiliations-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.affiliation {
+  flex: 1 1 120px;
+  text-align: center;
+}
+
+.affiliation img {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.affiliation .inst-name {
+  font-weight: 600;
+  display: block;
+}
+
+.affiliation .inst-date {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* News section */
+.news-item {
+  margin-bottom: 10px;
+}
+
+.news-item .news-date {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* Publications section */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pub-list li {
+  margin-bottom: 15px;
+}
+
+.pub-title {
+  font-weight: 600;
+}
+
+.pub-authors {
+  font-style: italic;
+  color: #555;
+}
+
+/* Projects section */
+.project-card {
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.project-card .project-dates {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Skills section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skills-grid h4 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Contact section */
+.contact-info {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.contact-info li {
+  margin-bottom: 5px;
+}
+
+.contact-info a {
+  color: #1772d0;
+}
+
+.contact-info a:hover {
+  color: #f09228;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero .bio,
+  .hero .photo {
+    flex: 1 1 100%;
+  }
+}
